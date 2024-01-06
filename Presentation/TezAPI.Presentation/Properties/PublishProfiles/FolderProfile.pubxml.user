@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <History>True|2023-12-27T01:44:58.4582256Z;False|2023-12-27T04:43:00.7055925+03:00;False|2023-12-27T04:34:38.7929919+03:00;False|2023-12-27T04:15:20.3886044+03:00;False|2023-12-27T04:15:05.7591925+03:00;False|2023-12-27T04:14:52.3727963+03:00;False|2023-12-27T03:52:21.0089898+03:00;False|2023-12-27T03:49:15.6762278+03:00;False|2023-12-27T03:49:00.8400961+03:00;False|2023-12-27T03:48:31.0758808+03:00;False|2023-12-27T03:46:39.5550646+03:00;False|2023-12-27T03:42:30.6893899+03:00;</History>
+    <LastFailureDetails />
+    <_PublishTargetUrl>C:\repo\recipe-main\TezAPI-Project-master\Presentation\TezAPI.Presentation\bin\Release\net6.0\publish\</_PublishTargetUrl>
+  </PropertyGroup>
+</Project>

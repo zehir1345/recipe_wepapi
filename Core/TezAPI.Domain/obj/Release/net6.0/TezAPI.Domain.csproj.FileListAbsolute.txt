@@ -1,0 +1,12 @@
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Domain\bin\Release\net6.0\TezAPI.Domain.deps.json
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Domain\bin\Release\net6.0\TezAPI.Domain.dll
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Domain\bin\Release\net6.0\TezAPI.Domain.pdb
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Domain\obj\Release\net6.0\TezAPI.Domain.csproj.AssemblyReference.cache
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Domain\obj\Release\net6.0\TezAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Domain\obj\Release\net6.0\TezAPI.Domain.AssemblyInfoInputs.cache
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Domain\obj\Release\net6.0\TezAPI.Domain.AssemblyInfo.cs
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Domain\obj\Release\net6.0\TezAPI.Domain.csproj.CoreCompileInputs.cache
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Domain\obj\Release\net6.0\TezAPI.Domain.dll
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Domain\obj\Release\net6.0\refint\TezAPI.Domain.dll
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Domain\obj\Release\net6.0\TezAPI.Domain.pdb
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Domain\obj\Release\net6.0\ref\TezAPI.Domain.dll

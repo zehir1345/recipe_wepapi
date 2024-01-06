@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "wYJpoMYYB+Q91wp8AW3dSfN3I/sJjIfMLxzKAnMz2JQ=",
+  "Source": "TezAPI.Presentation",
+  "BasePath": "_content/TezAPI.Presentation",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TezAPI.Presentation\\wwwroot",
+      "Source": "TezAPI.Presentation",
+      "ContentRoot": "C:\\repo\\recipe-main\\TezAPI-Project-master\\Presentation\\TezAPI.Presentation\\wwwroot\\",
+      "BasePath": "_content/TezAPI.Presentation",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\repo\\recipe-main\\TezAPI-Project-master\\Presentation\\TezAPI.Presentation\\wwwroot\\photo-images\\AppleBlackberryCrumble-1.jpg",
+      "SourceId": "TezAPI.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\repo\\recipe-main\\TezAPI-Project-master\\Presentation\\TezAPI.Presentation\\wwwroot\\",
+      "BasePath": "_content/TezAPI.Presentation",
+      "RelativePath": "photo-images/AppleBlackberryCrumble-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\photo-images\\AppleBlackberryCrumble-1.jpg"
+    },
+    {
+      "Identity": "C:\\repo\\recipe-main\\TezAPI-Project-master\\Presentation\\TezAPI.Presentation\\wwwroot\\photo-images\\Apple-Frangipan-Tart-1.jpg",
+      "SourceId": "TezAPI.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\repo\\recipe-main\\TezAPI-Project-master\\Presentation\\TezAPI.Presentation\\wwwroot\\",
+      "BasePath": "_content/TezAPI.Presentation",
+      "RelativePath": "photo-images/Apple-Frangipan-Tart-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\photo-images\\Apple-Frangipan-Tart-1.jpg"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿using TezAPI.Application.DTOs;
+
+namespace TezAPI.Application.DTOs.User
+{
+    public class CreateUser
+    {
+        public string NameSurname { get; set; }
+        public string Email { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string PasswordConfirm { get; set; }
+        public List<AddAllergy> addAllergy { get; set; } = new List<AddAllergy>();
+        public List<AddFavoriteCategories> addFavoriteCategories { get; set; } = new List<AddFavoriteCategories>(); 
+    }
+}

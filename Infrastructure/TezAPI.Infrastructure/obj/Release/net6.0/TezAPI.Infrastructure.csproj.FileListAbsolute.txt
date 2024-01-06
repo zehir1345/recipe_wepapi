@@ -1,0 +1,17 @@
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\bin\Release\net6.0\TezAPI.Infrastructure.deps.json
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\bin\Release\net6.0\TezAPI.Infrastructure.dll
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\bin\Release\net6.0\TezAPI.Infrastructure.pdb
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\bin\Release\net6.0\TezAPI.Application.dll
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\bin\Release\net6.0\TezAPI.Domain.dll
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\bin\Release\net6.0\TezAPI.Application.pdb
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\bin\Release\net6.0\TezAPI.Domain.pdb
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Release\net6.0\TezAPI.Infrastructure.csproj.AssemblyReference.cache
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Release\net6.0\TezAPI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Release\net6.0\TezAPI.Infrastructure.AssemblyInfoInputs.cache
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Release\net6.0\TezAPI.Infrastructure.AssemblyInfo.cs
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Release\net6.0\TezAPI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Release\net6.0\TezAPI.Infrastructure.csproj.CopyComplete
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Release\net6.0\TezAPI.Infrastructure.dll
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Release\net6.0\refint\TezAPI.Infrastructure.dll
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Release\net6.0\TezAPI.Infrastructure.pdb
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Release\net6.0\ref\TezAPI.Infrastructure.dll

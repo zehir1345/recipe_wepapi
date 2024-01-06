@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\repo\\recipe-main\\TezAPI-Project-master\\Presentation\\TezAPI.Presentation\\wwwroot\\photo-images\\Apple-Frangipan-Tart-1.jpg",
+      "PackagePath": "staticwebassets\\photo-images\\Apple-Frangipan-Tart-1.jpg"
+    },
+    {
+      "Id": "C:\\repo\\recipe-main\\TezAPI-Project-master\\Presentation\\TezAPI.Presentation\\wwwroot\\photo-images\\AppleBlackberryCrumble-1.jpg",
+      "PackagePath": "staticwebassets\\photo-images\\AppleBlackberryCrumble-1.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.TezAPI.Presentation.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.TezAPI.Presentation.props",
+      "PackagePath": "build\\TezAPI.Presentation.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.TezAPI.Presentation.props",
+      "PackagePath": "buildMultiTargeting\\TezAPI.Presentation.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.TezAPI.Presentation.props",
+      "PackagePath": "buildTransitive\\TezAPI.Presentation.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

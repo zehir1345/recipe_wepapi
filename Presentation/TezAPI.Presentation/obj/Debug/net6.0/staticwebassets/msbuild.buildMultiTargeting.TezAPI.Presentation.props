@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TezAPI.Presentation.props" />
+</Project>
