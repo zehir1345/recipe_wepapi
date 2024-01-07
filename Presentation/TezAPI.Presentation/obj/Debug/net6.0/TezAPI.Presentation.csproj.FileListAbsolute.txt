@@ -480,3 +480,4 @@ C:\repo\recipe-main\TezAPI-Project-master\Presentation\TezAPI.Presentation\obj\D
 C:\repo\recipe-main\TezAPI-Project-master\Presentation\TezAPI.Presentation\obj\Debug\net6.0\TezAPI.Presentation.pdb
 C:\repo\recipe-main\TezAPI-Project-master\Presentation\TezAPI.Presentation\obj\Debug\net6.0\TezAPI.Presentation.genruntimeconfig.cache
 C:\repo\recipe-main\TezAPI-Project-master\Presentation\TezAPI.Presentation\obj\Debug\net6.0\ref\TezAPI.Presentation.dll
+C:\repo\recipe-main\TezAPI-Project-master\Presentation\TezAPI.Presentation\obj\Debug\net6.0\TezAPI.Presentation.sourcelink.json

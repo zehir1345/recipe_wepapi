@@ -17,3 +17,4 @@ C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Persistence\obj\
 C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Persistence\obj\Debug\net6.0\TezAPI.Persistence.pdb
 C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Persistence\obj\Debug\net6.0\TezAPI.Persistence.genruntimeconfig.cache
 C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Persistence\obj\Debug\net6.0\ref\TezAPI.Persistence.dll
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Persistence\obj\Debug\net6.0\TezAPI.Persistence.sourcelink.json

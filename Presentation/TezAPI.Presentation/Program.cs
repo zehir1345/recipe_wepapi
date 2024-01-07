@@ -1,13 +1,16 @@
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using TezAPI.Application;
 using TezAPI.Application.Validators.Recipes;
+using TezAPI.Domain.Entities.Identity;
 using TezAPI.Infrastructure;
 using TezAPI.Infrastructure.Filters;
 using TezAPI.Infrastructure.Services.Storage.Local;
 using TezAPI.Persistence;
+using TezAPI.Persistence.Contexts;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddPersistenceServices();
@@ -41,6 +44,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 builder.Services.AddAutoMapper(typeof(Program));
+
+
+
 var app = builder.Build();
 
 

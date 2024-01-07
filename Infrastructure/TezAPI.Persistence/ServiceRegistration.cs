@@ -6,6 +6,14 @@ using TezAPI.Persistence.Repository;
 using TezAPI.Domain.Entities.Identity;
 using TezAPI.Application.Abstractions.Services;
 using TezAPI.Persistence.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using System.Runtime.CompilerServices;
+using System.Reflection;
+using System.Resources;
+using TezAPI.Domain.Entities;
 
 
 
@@ -22,9 +30,11 @@ public static class ServiceRegistration
             options.Password.RequireNonAlphanumeric = false;
             options.Password.RequireDigit = false;
             options.Password.RequireLowercase = false;
-            options.Password.RequireUppercase = false;           
+            options.Password.RequireUppercase = false;
         }
-        ).AddEntityFrameworkStores<TezAPIDbContext>();
+        ).AddEntityFrameworkStores<TezAPIDbContext>()
+        .AddDefaultTokenProviders();
+
 
         services.AddScoped<ICategoryReadRepository, CategoryReadRepository>();
         services.AddScoped<ICategoryWriteRepository, CategoryWriteRepository>();     
@@ -45,5 +55,5 @@ public static class ServiceRegistration
 
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IAuthService, AuthService>();
-    }
+    }  
 }

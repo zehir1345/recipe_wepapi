@@ -85,3 +85,4 @@ C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Debug\net6
 C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Debug\net6.0\TezAPI.Application.pdb
 C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Debug\net6.0\TezAPI.Application.genruntimeconfig.cache
 C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Debug\net6.0\ref\TezAPI.Application.dll
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Debug\net6.0\TezAPI.Application.sourcelink.json

@@ -9,6 +9,7 @@ namespace TezAPI.Application.Features.Commands.AppUser.UpdateUsername
 {
     public class UpdateUsernameCommadRequest : IRequest<UpdateUsernameCommadResponse>
     {
-        public DTOs.User.UpdateEmail.UpdateEmailRequest Request { get; set; }
+        public string currentEmail { get; set; }
+        public string newEmail { get; set; }
     }
 }

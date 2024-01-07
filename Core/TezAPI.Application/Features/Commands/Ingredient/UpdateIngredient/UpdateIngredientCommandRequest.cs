@@ -10,7 +10,7 @@ namespace TezAPI.Application.Features.Commands.Ingredient.UpdateIngredient
     public class UpdateIngredientCommandRequest : IRequest<UpdateIngredientCommandResponse>
     {
         public Guid Id { get; set; }
-        public string IngredientName { get; set; }S
+        public string IngredientName { get; set; }
         public DateTime CreatedDate { get; set; }
     }
 }

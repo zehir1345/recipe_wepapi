@@ -8,7 +8,7 @@ namespace TezAPI.Application.DTOs.User.UpdateEmail
 {
     public class UpdateEmailRequest
     {
-        public string UserId { get; set; }
+        public string currentEmail{ get; set; }
         public string newEmail { get; set; }
     }
 }

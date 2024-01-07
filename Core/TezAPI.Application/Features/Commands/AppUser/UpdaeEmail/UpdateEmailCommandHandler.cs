@@ -14,10 +14,11 @@ namespace TezAPI.Application.Features.Commands.AppUser.UpdaeEmail
 
         public async Task<UpdateEmailCommandResponse> Handle(UpdateEmailCommandRequest request, CancellationToken cancellationToken)
         {
-            var response = await _userService.UpdateEmailAsync(request.Request);
+            var response = await _userService.UpdateEmailAsync(request.currentEmail,request.newEmail);
             return new()
             {
-                UpdateEmailResponse = response,
+                 Message = response.Message,
+                 Succeded = response.Succeded,
             };
         }
     }

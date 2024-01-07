@@ -85,3 +85,4 @@ C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\o
 C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Debug\net6.0\refint\TezAPI.Infrastructure.dll
 C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Debug\net6.0\TezAPI.Infrastructure.pdb
 C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Debug\net6.0\ref\TezAPI.Infrastructure.dll
+C:\repo\recipe-main\TezAPI-Project-master\Infrastructure\TezAPI.Infrastructure\obj\Debug\net6.0\TezAPI.Infrastructure.sourcelink.json

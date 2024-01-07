@@ -45,7 +45,7 @@ namespace TezAPI.Persistence.Services
             {
                 foreach (var item in model.addAllergy)
                 {
-                    Allergy allergy = await _allergyReadRepository.GetByIdAsync(item.AllergyId);
+                    Allergy allergy = await _allergyReadRepository.GetByIdAsync(item.Id);
                     if (allergy != null)
                     user.UserAllergies.Add(allergy);
                 }
@@ -54,7 +54,7 @@ namespace TezAPI.Persistence.Services
             {
                 foreach (var item in model.addFavoriteCategories)
                 {
-                    Category userFavoriteCategory = await _categoryReadRepository.GetByIdAsync(item.FavoriteCategoryId);
+                    Category userFavoriteCategory = await _categoryReadRepository.GetByIdAsync(item.Id);
                     if (userFavoriteCategory != null)
                     user.UserFavoriteCategories.Add(userFavoriteCategory);
                 }
@@ -84,9 +84,9 @@ namespace TezAPI.Persistence.Services
                 };
         }
 
-        public async Task<UpdateEmailResponse> UpdateEmailAsync(UpdateEmailRequest model)
+        public async Task<UpdateEmailResponse> UpdateEmailAsync(string currentEmail, string newEmail)
         {
-            var user = await _userManager.FindByIdAsync(model.UserId);
+            var user = await _userManager.FindByEmailAsync(currentEmail);
             if (user == null)
             {
                 return new()
@@ -96,7 +96,7 @@ namespace TezAPI.Persistence.Services
                 };
             }
 
-            user.Email = model.newEmail;
+            user.Email = newEmail;
 
             var result = await _userManager.UpdateAsync(user);
             if (result.Succeeded)
@@ -119,7 +119,9 @@ namespace TezAPI.Persistence.Services
 
         public async Task<UpdatePasswordResponse> UpdatePasswordAsync(UpdatePasswordRequest model)
         {
-            var user = await _userManager.FindByIdAsync(model.UserId);
+            var user = await _userManager.FindByEmailAsync(model.UserNameorEmail);
+            if (user == null) 
+              user = await _userManager.FindByNameAsync(model.UserNameorEmail);
             if (user == null)
             {
                 return new()
@@ -151,9 +153,9 @@ namespace TezAPI.Persistence.Services
 
         }
 
-        public async Task<UpdateEmailResponse> UpdateUsernameAsync(UpdateEmailRequest model)
+        public async Task<UpdateEmailResponse> UpdateUsernameAsync(string currentEmail, string newEmail)
         {
-            var user = await _userManager.FindByIdAsync(model.UserId);
+            var user = await _userManager.FindByNameAsync(currentEmail);
             if (user == null)
             {
                 return new()
@@ -163,7 +165,7 @@ namespace TezAPI.Persistence.Services
                 };
             }
 
-            user.UserName = model.newEmail;
+            user.UserName = newEmail;
 
             var result = await _userManager.UpdateAsync(user);
             if (result.Succeeded)
@@ -184,9 +186,11 @@ namespace TezAPI.Persistence.Services
             }
         }
         //daha sonra denenecek
-        public async Task<UpdateEmailResponse> UpdateAllergyAsync(string userId,string allergyId)
+        public async Task<UpdateEmailResponse> UpdateAllergyAsync(string UserNameorEmail,string allergyId)
         {
-            var user = await _userManager.FindByIdAsync(userId);
+            var user = await _userManager.FindByEmailAsync(UserNameorEmail);
+            if (user == null)
+                user = await _userManager.FindByNameAsync(UserNameorEmail);
             if (user == null)
             {
                 return new()

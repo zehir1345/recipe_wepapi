@@ -19,10 +19,11 @@ namespace TezAPI.Application.Features.Commands.AppUser.UpdateUsername
 
         public async Task<UpdateUsernameCommadResponse> Handle(UpdateUsernameCommadRequest request, CancellationToken cancellationToken)
         {
-            var response = await _userService.UpdateUsernameAsync(request.Request);
+            var response = await _userService.UpdateUsernameAsync(request.currentEmail,request.newEmail);
             return new()
             {
-                UpdateuserNameResponse = response,
+               Message = response.Message,
+               Succeded = response.Succeded,
             };
         }
     }

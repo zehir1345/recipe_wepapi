@@ -8,8 +8,8 @@ namespace TezAPI.Application.Abstractions.Services
     public interface IUserService
     {
         Task<CreateUserResponse> CreateAsync(CreateUser model);
-        Task<UpdateEmailResponse> UpdateEmailAsync(UpdateEmailRequest model);
-        Task<UpdateEmailResponse> UpdateUsernameAsync(UpdateEmailRequest model);
+        Task<UpdateEmailResponse> UpdateEmailAsync(string currentEmail, string newEmail);
+        Task<UpdateEmailResponse> UpdateUsernameAsync(string currentEmail,string newEmail);
         Task<UpdatePasswordResponse> UpdatePasswordAsync(UpdatePasswordRequest model);
     }
 }

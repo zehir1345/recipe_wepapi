@@ -8,6 +8,7 @@ namespace TezAPI.Application.Features.Commands.AppUser.UpdateUsername
 {
     public class UpdateUsernameCommadResponse
     {
-        public DTOs.User.UpdateEmail.UpdateEmailResponse UpdateuserNameResponse { get; set; }
+        public bool Succeded { get; set; }
+        public string Message { get; set; }
     }
 }
