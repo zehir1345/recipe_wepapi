@@ -5,7 +5,10 @@ using TezAPI.Application.Abstractions.Storage;
 using TezAPI.Application.DTOs;
 using TezAPI.Application.Features.Queries.Recipe.GetAllReciipe;
 using TezAPI.Application.Repositories;
+<<<<<<< HEAD
 using TezAPI.Application.ViewModel.Recipes;
+=======
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 using TezAPI.Domain.Entities;
 
 namespace TezAPI.Presentation.Controllers;
@@ -15,6 +18,7 @@ namespace TezAPI.Presentation.Controllers;
 public class RecipeController : ControllerBase
 {
     readonly private IRecipeWriteRepository _recipeWriteRepository;
+<<<<<<< HEAD
     readonly private IAllergyReadRepository _allergyReadRepository;
     readonly private IIngredientReadRepository _ingredientReadRepository;
     readonly private IRecipeReadRepository _recipeReadRepository;
@@ -27,6 +31,19 @@ public class RecipeController : ControllerBase
     public RecipeController(IRecipeWriteRepository recipeWriteRepository, IAllergyReadRepository allergyReadRepository, IIngredientReadRepository ingredientReadRepository, ICategoryReadRepository categoryReadRepository, IMediator mediator,
         IStorageService storageService
         ,IRecipeImageFileWriteRepository recipeImageFileWriteRepository, IRecipeReadRepository recipeReadRepository, IRecipeImageFileReadRepository recipeımageReadFileRepository)
+=======
+    readonly private IRecipeReadRepository _recipeReadRepository;
+    readonly private IAllergyReadRepository _allergyReadRepository;
+    readonly private IIngredientReadRepository _ingredientReadRepository;
+    readonly private ICategoryReadRepository _categoryReadRepository;
+    readonly IStorageService _storageService;
+    private readonly IRecipeImageFileWriteRepository _fileWriteRepository;
+
+    readonly IMediator _mediator;
+    public RecipeController(IRecipeWriteRepository recipeWriteRepository, IAllergyReadRepository allergyReadRepository, IIngredientReadRepository ingredientReadRepository, ICategoryReadRepository categoryReadRepository, IMediator mediator,
+        IStorageService storageService
+        ,IRecipeImageFileWriteRepository recipeImageFileWriteRepository, IRecipeReadRepository recipeReadRepository)
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
     {
         _recipeWriteRepository = recipeWriteRepository;
         _allergyReadRepository = allergyReadRepository;
@@ -36,7 +53,10 @@ public class RecipeController : ControllerBase
         _mediator = mediator;
         _recipeReadRepository = recipeReadRepository;
         _fileWriteRepository = recipeImageFileWriteRepository;
+<<<<<<< HEAD
         _recipeımageFileReadRepository = recipeımageReadFileRepository;
+=======
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
     }
    
     [HttpGet]
@@ -166,6 +186,7 @@ public class RecipeController : ControllerBase
         await _fileWriteRepository.SaveAsync();
         return Ok();
     }
+<<<<<<< HEAD
     [HttpGet("GetFavoriteRecipes/{userId}")]
     public IActionResult GetFavoriteRecipes(Guid userId)
     {
@@ -281,4 +302,12 @@ public class RecipeController : ControllerBase
 
 
 
+=======
+
+}
+
+    
+   
+       
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 

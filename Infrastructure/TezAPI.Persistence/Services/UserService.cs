@@ -47,7 +47,11 @@ namespace TezAPI.Persistence.Services
                 {
                     Allergy allergy = await _allergyReadRepository.GetByIdAsync(item.Id);
                     if (allergy != null)
+<<<<<<< HEAD
                     user.Allergies.Add(allergy);
+=======
+                    user.UserAllergies.Add(allergy);
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                 }
             }
             if (model.addFavoriteCategories.Count > 0)
@@ -202,7 +206,11 @@ namespace TezAPI.Persistence.Services
             Allergy allergy = await _allergyReadRepository.GetByIdAsync(allergyId);
             User userUpdate = user.User;
             if (allergy != null) 
+<<<<<<< HEAD
                userUpdate.Allergies.Add(allergy);
+=======
+               userUpdate.UserAllergies.Add(allergy);
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
              _userWriteRepository.Update(userUpdate);
 
             var result = await _userWriteRepository.SaveAsync();
@@ -237,7 +245,11 @@ namespace TezAPI.Persistence.Services
             Allergy allergy = await _allergyReadRepository.GetByIdAsync(allergyId);
             User userUpdate = user.User;
             if (allergy != null)
+<<<<<<< HEAD
                 userUpdate.Allergies.Remove(allergy);
+=======
+                userUpdate.UserAllergies.Remove(allergy);
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
             _userWriteRepository.Update(userUpdate);
 
             var result = await _userWriteRepository.SaveAsync();

@@ -2,8 +2,13 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+<<<<<<< HEAD
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+=======
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 using TezAPI.Persistence.Contexts;
 
 #nullable disable
@@ -18,6 +23,7 @@ namespace TezAPI.Persistence.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.13")
+<<<<<<< HEAD
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -33,6 +39,23 @@ namespace TezAPI.Persistence.Migrations
                     b.HasKey("AllergiesId", "UsersId");
 
                     b.HasIndex("UsersId");
+=======
+                .HasAnnotation("Relational:MaxIdentifierLength", 63);
+
+            NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+
+            modelBuilder.Entity("AllergyUser", b =>
+                {
+                    b.Property<Guid>("UserAllergiesId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("UserAllergiesId1")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("UserAllergiesId", "UserAllergiesId1");
+
+                    b.HasIndex("UserAllergiesId1");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.ToTable("AllergyUser");
                 });
@@ -40,10 +63,17 @@ namespace TezAPI.Persistence.Migrations
             modelBuilder.Entity("CategoryRecipe", b =>
                 {
                     b.Property<Guid>("CategoriesId")
+<<<<<<< HEAD
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("RecipesId")
                         .HasColumnType("uniqueidentifier");
+=======
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("RecipesId")
+                        .HasColumnType("uuid");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("CategoriesId", "RecipesId");
 
@@ -55,10 +85,17 @@ namespace TezAPI.Persistence.Migrations
             modelBuilder.Entity("CategoryUser", b =>
                 {
                     b.Property<Guid>("UserCategoriesId")
+<<<<<<< HEAD
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("UserFavoriteCategoriesId")
                         .HasColumnType("uniqueidentifier");
+=======
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("UserFavoriteCategoriesId")
+                        .HasColumnType("uuid");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("UserCategoriesId", "UserFavoriteCategoriesId");
 
@@ -71,6 +108,7 @@ namespace TezAPI.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
@@ -84,6 +122,21 @@ namespace TezAPI.Persistence.Migrations
                     b.Property<string>("RoleId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+=======
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("text");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("text");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("Id");
 
@@ -96,6 +149,7 @@ namespace TezAPI.Persistence.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
@@ -109,6 +163,21 @@ namespace TezAPI.Persistence.Migrations
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+=======
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("text");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("Id");
 
@@ -120,6 +189,7 @@ namespace TezAPI.Persistence.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
+<<<<<<< HEAD
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
@@ -131,6 +201,19 @@ namespace TezAPI.Persistence.Migrations
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+=======
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("text");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
@@ -142,10 +225,17 @@ namespace TezAPI.Persistence.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
                     b.Property<string>("UserId")
+<<<<<<< HEAD
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("RoleId")
                         .HasColumnType("nvarchar(450)");
+=======
+                        .HasColumnType("text");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("text");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("UserId", "RoleId");
 
@@ -157,6 +247,7 @@ namespace TezAPI.Persistence.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
                     b.Property<string>("UserId")
+<<<<<<< HEAD
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
@@ -167,6 +258,18 @@ namespace TezAPI.Persistence.Migrations
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
+=======
+                        .HasColumnType("text");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("text");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
@@ -176,10 +279,17 @@ namespace TezAPI.Persistence.Migrations
             modelBuilder.Entity("RecipeRecipeImageFile", b =>
                 {
                     b.Property<Guid>("RecipeImageFilesId")
+<<<<<<< HEAD
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("RecipesId")
                         .HasColumnType("uniqueidentifier");
+=======
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("RecipesId")
+                        .HasColumnType("uuid");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("RecipeImageFilesId", "RecipesId");
 
@@ -191,10 +301,17 @@ namespace TezAPI.Persistence.Migrations
             modelBuilder.Entity("RecipeUser", b =>
                 {
                     b.Property<Guid>("FavoriteRecipesId")
+<<<<<<< HEAD
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("UsersId")
                         .HasColumnType("uniqueidentifier");
+=======
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("UsersId")
+                        .HasColumnType("uuid");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("FavoriteRecipesId", "UsersId");
 
@@ -207,6 +324,7 @@ namespace TezAPI.Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedDate")
@@ -215,6 +333,16 @@ namespace TezAPI.Persistence.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+=======
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("Id");
 
@@ -223,68 +351,123 @@ namespace TezAPI.Persistence.Migrations
                     b.HasData(
                         new
                         {
+<<<<<<< HEAD
                             Id = new Guid("f3b1d5fd-1735-421f-ae40-0c58ef3dcb8c"),
                             CreatedDate = new DateTime(2024, 1, 14, 20, 4, 8, 309, DateTimeKind.Utc).AddTicks(2048),
+=======
+                            Id = new Guid("52bae312-31fe-40d4-9890-9b39fc44046a"),
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5142),
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                             Name = "Dairy"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = new Guid("f9b7dfd6-e813-4016-b97c-c5a39eb426e2"),
                             CreatedDate = new DateTime(2024, 1, 14, 20, 4, 8, 309, DateTimeKind.Utc).AddTicks(2054),
+=======
+                            Id = new Guid("c6e52986-53e8-4461-819d-44836a9269ef"),
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5145),
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                             Name = "Gluten"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = new Guid("b9406379-8760-412e-a2c7-1dee8f539757"),
                             CreatedDate = new DateTime(2024, 1, 14, 20, 4, 8, 309, DateTimeKind.Utc).AddTicks(2056),
+=======
+                            Id = new Guid("6eb07e38-2851-4350-b6a4-448522960961"),
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5147),
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                             Name = "Peanut"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = new Guid("17fd95b2-f5bd-44da-9c91-a01a3b730ee5"),
                             CreatedDate = new DateTime(2024, 1, 14, 20, 4, 8, 309, DateTimeKind.Utc).AddTicks(2058),
+=======
+                            Id = new Guid("1da2cc27-d215-41f5-ba1f-f1a2a6ec4e9e"),
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5148),
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                             Name = "Dessert"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = new Guid("939fc1af-e9fa-4cad-a3c0-848323193a8d"),
                             CreatedDate = new DateTime(2024, 1, 14, 20, 4, 8, 309, DateTimeKind.Utc).AddTicks(2060),
+=======
+                            Id = new Guid("fada1ca5-fd49-44ca-8158-a3199611a331"),
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5163),
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                             Name = "Soy"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = new Guid("ad069585-1480-48de-b08f-4f300d54ad3f"),
                             CreatedDate = new DateTime(2024, 1, 14, 20, 4, 8, 309, DateTimeKind.Utc).AddTicks(2062),
+=======
+                            Id = new Guid("11342a05-431d-402e-8b95-945e7a8b54d8"),
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5164),
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                             Name = "Egg"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = new Guid("9d220741-b187-4309-a860-0aa84951d11f"),
                             CreatedDate = new DateTime(2024, 1, 14, 20, 4, 8, 309, DateTimeKind.Utc).AddTicks(2063),
+=======
+                            Id = new Guid("3b966ab8-9124-40e7-9ae8-924c98bfe9d6"),
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5166),
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                             Name = "Seafood"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = new Guid("0b8726af-a727-4ce3-b0b4-e9d6bd63197c"),
                             CreatedDate = new DateTime(2024, 1, 14, 20, 4, 8, 309, DateTimeKind.Utc).AddTicks(2065),
+=======
+                            Id = new Guid("14f28f66-2023-4c59-b0bc-ef2ac58b9b80"),
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5167),
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                             Name = "Shellfish"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = new Guid("f8ae6839-5419-46f7-ae37-0ed640beec01"),
                             CreatedDate = new DateTime(2024, 1, 14, 20, 4, 8, 309, DateTimeKind.Utc).AddTicks(2070),
+=======
+                            Id = new Guid("e52508d6-f5bd-403b-84bc-0648cdca0a49"),
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5169),
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                             Name = "Pork"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = new Guid("bd66cf13-bea3-4b29-bd05-ddc798d33a62"),
                             CreatedDate = new DateTime(2024, 1, 14, 20, 4, 8, 309, DateTimeKind.Utc).AddTicks(2072),
+=======
+                            Id = new Guid("7d898e27-256b-454e-bc11-945816ee79f9"),
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5170),
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                             Name = "Wheat"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = new Guid("f528d15a-5363-4215-b483-d13bf05f425c"),
                             CreatedDate = new DateTime(2024, 1, 14, 20, 4, 8, 309, DateTimeKind.Utc).AddTicks(2074),
+=======
+                            Id = new Guid("21c47d34-5341-4049-b306-011e8cd4c541"),
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5172),
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                             Name = "Sesame"
                         });
                 });
@@ -293,6 +476,7 @@ namespace TezAPI.Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CategoryName")
@@ -301,6 +485,16 @@ namespace TezAPI.Persistence.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
+=======
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("Id");
 
@@ -309,6 +503,7 @@ namespace TezAPI.Persistence.Migrations
                     b.HasData(
                         new
                         {
+<<<<<<< HEAD
                             Id = new Guid("3be04c1a-91da-4554-b856-a7e82b4874f3"),
                             CategoryName = "Beef",
                             CreatedDate = new DateTime(2024, 1, 14, 20, 4, 8, 309, DateTimeKind.Utc).AddTicks(2289)
@@ -390,6 +585,89 @@ namespace TezAPI.Persistence.Migrations
                             Id = new Guid("0c70e781-6021-4a06-81ac-9194ca18943d"),
                             CategoryName = "Vegetarian",
                             CreatedDate = new DateTime(2024, 1, 14, 20, 4, 8, 309, DateTimeKind.Utc).AddTicks(2329)
+=======
+                            Id = new Guid("da16be06-0d9a-41b9-9442-aee38a9c9f3c"),
+                            CategoryName = "Beef",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5312)
+                        },
+                        new
+                        {
+                            Id = new Guid("fde2dc31-76cc-4577-936f-8db5e688c8d6"),
+                            CategoryName = "Breakfast",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5317)
+                        },
+                        new
+                        {
+                            Id = new Guid("294a27c6-44ba-47a6-b257-65fc1a45c162"),
+                            CategoryName = "Chicken",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5319)
+                        },
+                        new
+                        {
+                            Id = new Guid("54e9ba34-dec4-4ac3-a31c-6bf0f6709219"),
+                            CategoryName = "Dessert",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5321)
+                        },
+                        new
+                        {
+                            Id = new Guid("75c3f772-ec4f-4ecc-8ffa-5c8d33f109f3"),
+                            CategoryName = "Goat",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5322)
+                        },
+                        new
+                        {
+                            Id = new Guid("b6ba3d23-01d9-4ce8-909a-45befb2fdc2c"),
+                            CategoryName = "Lamb",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5324)
+                        },
+                        new
+                        {
+                            Id = new Guid("32ab1d88-6f9f-447a-80db-88c23c88bc90"),
+                            CategoryName = "Miscellaneous",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5325)
+                        },
+                        new
+                        {
+                            Id = new Guid("3ef5b401-3a9a-4f68-aabd-05896386763a"),
+                            CategoryName = "Pasta",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5327)
+                        },
+                        new
+                        {
+                            Id = new Guid("18252d66-634b-4e54-9b6f-76fd76b73714"),
+                            CategoryName = "Pork",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5328)
+                        },
+                        new
+                        {
+                            Id = new Guid("79f18845-924e-4e81-a09d-d4e5e32ef9ae"),
+                            CategoryName = "Seafood",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5332)
+                        },
+                        new
+                        {
+                            Id = new Guid("b5419e65-2ce3-4ead-bb00-05b1c729e571"),
+                            CategoryName = "Side",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5333)
+                        },
+                        new
+                        {
+                            Id = new Guid("70554f0d-35fc-454d-a941-28c97694eeed"),
+                            CategoryName = "Starter",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5335)
+                        },
+                        new
+                        {
+                            Id = new Guid("333c31c0-390e-4f55-90fa-3fad68cd31b8"),
+                            CategoryName = "Vegan",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5336)
+                        },
+                        new
+                        {
+                            Id = new Guid("87c6f14e-2e06-46fd-baff-5892ba5d57c8"),
+                            CategoryName = "Vegetarian",
+                            CreatedDate = new DateTime(2024, 1, 6, 12, 18, 57, 519, DateTimeKind.Utc).AddTicks(5337)
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                         });
                 });
 
@@ -397,6 +675,7 @@ namespace TezAPI.Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedDate")
@@ -417,6 +696,28 @@ namespace TezAPI.Persistence.Migrations
                     b.Property<string>("Storage")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+=======
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Path")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Storage")
+                        .IsRequired()
+                        .HasColumnType("text");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("Id");
 
@@ -430,6 +731,7 @@ namespace TezAPI.Persistence.Migrations
             modelBuilder.Entity("TezAPI.Domain.Entities.Identity.AppRole", b =>
                 {
                     b.Property<string>("Id")
+<<<<<<< HEAD
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -443,13 +745,32 @@ namespace TezAPI.Persistence.Migrations
                     b.Property<string>("NormalizedName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+=======
+                        .HasColumnType("text");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedName")
                         .IsUnique()
+<<<<<<< HEAD
                         .HasDatabaseName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
+=======
+                        .HasDatabaseName("RoleNameIndex");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.ToTable("AspNetRoles", (string)null);
                 });
@@ -457,6 +778,7 @@ namespace TezAPI.Persistence.Migrations
             modelBuilder.Entity("TezAPI.Domain.Entities.Identity.AppUser", b =>
                 {
                     b.Property<string>("Id")
+<<<<<<< HEAD
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("AccessFailedCount")
@@ -518,6 +840,69 @@ namespace TezAPI.Persistence.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+=======
+                        .HasColumnType("text");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("NameSurname")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("text");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("RefreshTokenEndDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("Id");
 
@@ -526,8 +911,12 @@ namespace TezAPI.Persistence.Migrations
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
+<<<<<<< HEAD
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
+=======
+                        .HasDatabaseName("UserNameIndex");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasIndex("UserId");
 
@@ -538,6 +927,7 @@ namespace TezAPI.Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedDate")
@@ -546,6 +936,16 @@ namespace TezAPI.Persistence.Migrations
                     b.Property<string>("IngredientName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+=======
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("IngredientName")
+                        .IsRequired()
+                        .HasColumnType("text");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("Id");
 
@@ -556,6 +956,7 @@ namespace TezAPI.Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid?>("AllergyId")
@@ -580,6 +981,32 @@ namespace TezAPI.Persistence.Migrations
 
                     b.Property<Guid?>("UserId")
                         .HasColumnType("uniqueidentifier");
+=======
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid?>("AllergyId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("CookingTime")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("PreparationTime")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("RecipeName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("RecipeText")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid?>("UserId")
+                        .HasColumnType("uuid");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("Id");
 
@@ -594,6 +1021,7 @@ namespace TezAPI.Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CommentText")
@@ -608,6 +1036,22 @@ namespace TezAPI.Persistence.Migrations
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
+=======
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CommentText")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("RecipeId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("Id");
 
@@ -622,6 +1066,7 @@ namespace TezAPI.Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Amount")
@@ -636,6 +1081,22 @@ namespace TezAPI.Persistence.Migrations
 
                     b.Property<Guid>("RecipeId")
                         .HasColumnType("uniqueidentifier");
+=======
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Amount")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("IngredientId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("RecipeId")
+                        .HasColumnType("uuid");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("Id");
 
@@ -650,10 +1111,17 @@ namespace TezAPI.Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
+=======
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasKey("Id");
 
@@ -672,7 +1140,11 @@ namespace TezAPI.Persistence.Migrations
                     b.HasBaseType("TezAPI.Domain.Entities.File");
 
                     b.Property<Guid>("UserId")
+<<<<<<< HEAD
                         .HasColumnType("uniqueidentifier");
+=======
+                        .HasColumnType("uuid");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
                     b.HasIndex("UserId");
 
@@ -683,13 +1155,21 @@ namespace TezAPI.Persistence.Migrations
                 {
                     b.HasOne("TezAPI.Domain.Entities.Allergy", null)
                         .WithMany()
+<<<<<<< HEAD
                         .HasForeignKey("AllergiesId")
+=======
+                        .HasForeignKey("UserAllergiesId")
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("TezAPI.Domain.Entities.User", null)
                         .WithMany()
+<<<<<<< HEAD
                         .HasForeignKey("UsersId")
+=======
+                        .HasForeignKey("UserAllergiesId1")
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

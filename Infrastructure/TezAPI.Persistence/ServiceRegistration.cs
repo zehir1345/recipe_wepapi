@@ -22,7 +22,11 @@ public static class ServiceRegistration
 {
     public static void AddPersistenceServices(this IServiceCollection services)
     {
+<<<<<<< HEAD
         services.AddDbContext<TezAPIDbContext>(options => options.UseSqlServer(Configuration.ConnectionString), ServiceLifetime.Scoped);
+=======
+        services.AddDbContext<TezAPIDbContext>(options => options.UseNpgsql(Configuration.ConnectionString), ServiceLifetime.Scoped);
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
         services.AddIdentity<AppUser, AppRole>(options =>
         {

@@ -12,7 +12,11 @@ static class Configuration
                 configurationManager.SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../../Presentation/TezAPI.Presentation"));
                 configurationManager.AddJsonFile("appsettings.json");
             
+<<<<<<< HEAD
             return configurationManager.GetConnectionString("MsSql");
+=======
+            return configurationManager.GetConnectionString("PostgreSQL");
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
         }
     }
 

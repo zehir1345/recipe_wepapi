@@ -51,11 +51,19 @@ var app = builder.Build();
 
 
 // Configure the HTTP request pipeline.
+<<<<<<< HEAD
 /*if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }*/
+=======
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 
 app.UseStaticFiles();
 
@@ -64,6 +72,10 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+<<<<<<< HEAD
 app.UseSwagger();
 app.UseSwaggerUI();
+=======
+
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 app.Run();

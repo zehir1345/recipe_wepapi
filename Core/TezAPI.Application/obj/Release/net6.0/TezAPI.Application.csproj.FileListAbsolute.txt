@@ -1,0 +1,17 @@
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\bin\Release\net6.0\TezAPI.Application.deps.json
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\bin\Release\net6.0\TezAPI.Application.runtimeconfig.json
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\bin\Release\net6.0\TezAPI.Application.dll
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\bin\Release\net6.0\TezAPI.Application.pdb
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\bin\Release\net6.0\TezAPI.Domain.dll
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\bin\Release\net6.0\TezAPI.Domain.pdb
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Release\net6.0\TezAPI.Application.csproj.AssemblyReference.cache
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Release\net6.0\TezAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Release\net6.0\TezAPI.Application.AssemblyInfoInputs.cache
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Release\net6.0\TezAPI.Application.AssemblyInfo.cs
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Release\net6.0\TezAPI.Application.csproj.CoreCompileInputs.cache
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Release\net6.0\TezAPI.Application.csproj.CopyComplete
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Release\net6.0\TezAPI.Application.dll
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Release\net6.0\refint\TezAPI.Application.dll
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Release\net6.0\TezAPI.Application.pdb
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Release\net6.0\TezAPI.Application.genruntimeconfig.cache
+C:\repo\recipe-main\TezAPI-Project-master\Core\TezAPI.Application\obj\Release\net6.0\ref\TezAPI.Application.dll

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 ﻿using Microsoft.EntityFrameworkCore;
 using TezAPI.Application.Repositories;
+=======
+﻿using TezAPI.Application.Repositories;
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 using TezAPI.Domain.Entities;
 using TezAPI.Persistence.Contexts;
 
@@ -7,6 +11,7 @@ namespace TezAPI.Persistence.Repository
 {
     public class RecipeWriteRepository : WriteRepository<Recipe>, IRecipeWriteRepository
     {
+<<<<<<< HEAD
         private readonly TezAPIDbContext context;
         public RecipeWriteRepository(TezAPIDbContext context) : base(context)
         {
@@ -69,6 +74,10 @@ namespace TezAPI.Persistence.Repository
             // Remove the recipe from the user's favorites
             user.FavoriteRecipes.Remove(recipe);
             await context.SaveChangesAsync();
+=======
+        public RecipeWriteRepository(TezAPIDbContext context) : base(context)
+        {
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
         }
 
         public void UpdateFavState(Recipe recipe)

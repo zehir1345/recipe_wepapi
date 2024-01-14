@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 ﻿using Microsoft.EntityFrameworkCore;
 using TezAPI.Application.Repositories;
+=======
+﻿using TezAPI.Application.Repositories;
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
 using TezAPI.Domain.Entities;
 using TezAPI.Persistence.Contexts;
 
@@ -7,6 +11,7 @@ namespace TezAPI.Persistence.Repository
 {
     public class RecipeReadRepository : ReadRepository<Recipe>, IRecipeReadRepository
     {
+<<<<<<< HEAD
         private readonly TezAPIDbContext context;
         public RecipeReadRepository(TezAPIDbContext context) : base(context)
         {
@@ -66,5 +71,10 @@ namespace TezAPI.Persistence.Repository
 
                 return recentlyViewedRecipes;
             }*/
+=======
+        public RecipeReadRepository(TezAPIDbContext context) : base(context)
+        {
+        }
+>>>>>>> 42e5ef53e9764b27b5e0b0c8d2072b1299e3340f
     }
 }
